@@ -18,7 +18,9 @@
 
 
 **Выполнение задания:**
+Ранее Minikube и Helm были установлены, а также добавлен репозиторий Apache Airflow.
 
+Установил Airflow в пространстве airflow, указав репозиторий с нашим DAG
 ```
 helm install airflow apache-airflow/airflow \
 --debug \
