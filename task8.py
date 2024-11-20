@@ -20,9 +20,9 @@ default_args = {
     'retries': 1,
 }
 
-dag = DAG('simple_dag', 
+dag = DAG('final_task8_dag', 
           default_args=default_args, 
-          schedule_interval='45 15 * * *')
+          schedule_interval='45 9 * * *')
 
 start = DummyOperator(task_id='start', dag=dag)
 end = DummyOperator(task_id='end', dag=dag)
