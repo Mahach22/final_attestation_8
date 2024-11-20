@@ -20,7 +20,7 @@
 **Выполнение задания:**
 Ранее Minikube и Helm были установлены, а также добавлен репозиторий Apache Airflow.
 
-Установил Airflow в пространстве airflow, указав репозиторий с нашим DAG
+Разворачиваем Airflow в пространстве airflow, указав репозиторий [с нашим DAG](https://github.com/Mahach22/final_attestation_8/blob/main/task8.py)
 ```
 helm install airflow apache-airflow/airflow \
 --debug \
@@ -31,7 +31,9 @@ helm install airflow apache-airflow/airflow \
 --set dags.gitSync.branch=main \
 --set dags.gitSync.subPath="/"
 ```
-
+Пробрасываем порт для получения URL доступа к веб интерфейсу Airflow по адресу localhost:8888 с локальной машины
 ```
 kubectl port-forward svc/airflow-webserver 8888:8080 --namespace airflow
 ```
+
+
