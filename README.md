@@ -38,4 +38,9 @@ helm install airflow apache-airflow/airflow \
 kubectl port-forward svc/airflow-webserver 8888:8080 --namespace airflow
 ```
 
+На следующих скринах видно, что все операторы нашего DAG с названием `final_task8_dag` успешно выполнены и время запуска DAG указано 9:45 UTC, что соответствует 12:45 по Москве.
 
+![airflow](https://github.com/Mahach22/final_attestation_8/blob/main/1_airflow.png)
+
+
+![airflow](https://github.com/Mahach22/final_attestation_8/blob/main/2_dag.png)
